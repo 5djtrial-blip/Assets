@@ -38,6 +38,9 @@
       overflow: hidden;
       transition: transform 0.2s, box-shadow 0.2s;
       cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .card:hover {
@@ -47,8 +50,10 @@
 
     .card img {
       width: 100%;
-      height: 150px;
-      object-fit: cover;
+      height: 200px; /* fixed square size */
+      object-fit: contain; /* show whole image inside the box */
+      background-color: #f0f0f0; /* optional: gray background if image doesn't fill box */
+      padding: 10px; /* optional: space around smaller images */
     }
 
     .card-title {
@@ -56,6 +61,7 @@
       font-size: 16px;
       font-weight: bold;
       text-align: center;
+      width: 100%;
     }
 
     /* Optional footer */
@@ -68,7 +74,7 @@
 
     @media(max-width: 500px){
       .card img {
-        height: 120px;
+        height: 150px;
       }
     }
   </style>
@@ -78,22 +84,37 @@
   <div class="gallery">
     <!-- Example image cards -->
     <div class="card">
-      <img src="image-assets/lady-avatar.png" alt="avatar">
-      <div class="card-title">Young Lady</div>
+      <img src="image-assets/lady-avatar.png" alt="Image 1">
+      <div class="card-title">Lady Avatar</div>
     </div>
     <div class="card">
-      <img src="assets/image2.png" alt="Image 2">
-      <div class="card-title">Image 2</div>
+      <img src="image-assets/young-man-avatar.png" alt="Image 2">
+      <div class="card-title">Young Man</div>
     </div>
     <div class="card">
-      <img src="assets/image3.png" alt="Image 3">
-      <div class="card-title">Image 3</div>
+      <img src="image-assets/girl-avatar.png" alt="Image 3">
+      <div class="card-title">Girl Avatar</div>
     </div>
-    <!-- Add more cards as needed -->
+    <div class="card">
+      <img src="image-assets/boy-avatar.png" alt="Image 3">
+      <div class="card-title">Boy Avatar</div>
+    </div>
+    <div class="card">
+      <img src="image-assets/little-girl-avatar.png" alt="Image 3">
+      <div class="card-title">Little Girl Avatar</div>
+    </div>
+    <div class="card">
+      <img src="image-assets/old-man-avatar.png" alt="Image 3">
+      <div class="card-title">Old Man Avatar</div>
+    </div>
+    <div class="card">
+      <img src="image-assets/old-lady-avatar.png" alt="Image 3">
+      <div class="card-title">Old Lady Avatar</div>
+    </div>
   </div>
 
   <footer>
-    &copy; 2025Assets Repository
+    &copy; 2025 Assets Repository
   </footer>
 </body>
 </html>
